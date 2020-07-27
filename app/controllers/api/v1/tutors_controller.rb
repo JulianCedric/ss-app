@@ -46,6 +46,6 @@ class Api::V1::TutorsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tutor_params
-      params.require(:tutor).permit(:id, :name, :username, :pwd, :yearsExperience, :bio)
+      params.require(:tutor).permit(:name)
     end
 end

@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_25_183852) do
+ActiveRecord::Schema.define(version: 2020_07_27_051903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sessions", force: :cascade do |t|
+  create_table "sessions", id: false, force: :cascade do |t|
     t.bigint "tutor_id", null: false
     t.bigint "student_id", null: false
     t.string "date"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 2020_07_25_183852) do
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["student_id"], name: "index_sessions_on_student_id"
-    t.index ["tutor_id"], name: "index_sessions_on_tutor_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -45,6 +43,4 @@ ActiveRecord::Schema.define(version: 2020_07_25_183852) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "sessions", "students"
-  add_foreign_key "sessions", "tutors"
 end

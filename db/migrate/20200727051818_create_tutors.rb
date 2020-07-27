@@ -3,6 +3,8 @@ class CreateTutors < ActiveRecord::Migration[6.0]
     create_table :tutors do |t|
       t.string :name
       t.string :username
+
+
       t.string :password
       t.integer :yearsExperience
 

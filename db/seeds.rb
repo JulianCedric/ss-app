@@ -18,6 +18,6 @@ Student.create(name: "Ellen Fallon", parentName: "Jack Fallon", parentEmail: "j.
 Student.create(name: "Frank Winston", parentName: "George Winston", parentEmail: "g.winston@email.com", school: "Edison City HS")
 Student.create(name: "David Smith", parentName: "Heather Smith", parentEmail: "h.smith@email.com", school: "River Oaks HS")
 
-Session.create(date: "August 08, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mrs. Fallon! Just wanted to let you know that Ellen did a great job at today's session! Let me know when she'd like to start the program! - Adam" )
-Session.create(date: "August 08, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mr. Winston! Another really awesome session today with Frank. He asked a lot of questions about career paths he'd like to learn more about! - Adam") 
-Session.create(date: "August 15, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mrs. Smith! David asked a ton of questions today - and he's really excited about starting the program! - Claire")
+Session.create(tutor_id: 1, student_id: 1, date: "August 08, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mrs. Fallon! Just wanted to let you know that Ellen did a great job at today's session! Let me know when she'd like to start the program! - Adam" )
+Session.create(tutor_id: 1, student_id: 2, date: "August 08, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mr. Winston! Another really awesome session today with Frank. He asked a lot of questions about career paths he'd like to learn more about! - Adam") 
+Session.create(tutor_id: 2, student_id: 3, date: "August 15, 2020", preAssessmentCompletionStatus: false, comment: "Hi Mrs. Smith! David asked a ton of questions today - and he's really excited about starting the program! - Claire")
