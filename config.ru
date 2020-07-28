@@ -21,7 +21,7 @@ run Rails.application
 #           max_age: 600
 #           # headers to expose
 #     end
-  
+#   
 #     allow do
 #       origins '*'
 #       resource '/public/*', headers: :any, methods: :get
@@ -33,3 +33,5 @@ run Rails.application
 #           if: proc { |env| env['HTTP_HOST'] == 'api.example.com' }
 #     end
 #   end
+
+# 
