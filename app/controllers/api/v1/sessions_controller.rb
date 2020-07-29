@@ -1,8 +1,10 @@
 class Api::V1::SessionsController < ApplicationController
-  before_action :set_session, only: [:show, :update, :destroy]
+  # before_action :set_session, only: [:show, :update, :destroy]
 
   # GET /sessions
   def index
+    # byebug
+
     @sessions = Session.all
 
     render json: @sessions
@@ -15,6 +17,7 @@ class Api::V1::SessionsController < ApplicationController
 
   # POST /sessions
   def create
+    byebug
     @session = Session.create(session_params)
     render json: @session 
     # if @session.save

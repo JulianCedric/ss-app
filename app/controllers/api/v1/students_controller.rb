@@ -15,6 +15,7 @@ class Api::V1::StudentsController < ApplicationController
 
   # POST /students
   def create
+    byebug
     @student = Student.new(student_params)
 
     if @student.save
